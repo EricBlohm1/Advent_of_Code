@@ -4,8 +4,6 @@ file = open("input.txt", "r")
 #value of each element is index+1
 text_digits = ["one","two","three","four","five","six","seven","eight","nine"]
 
-#wont work...
-
 def convert(line):
     lo = 0
     result = []
@@ -14,6 +12,7 @@ def convert(line):
             digit = text_digits[i]
             substr = line[lo: lo+len(digit)]
             if digit == substr:
+                #update first letter och the correct digit, with the numeric value. Will ruin the "text value"
                 result.append(str(i+1))
             else:
                 result.append(line[lo])
