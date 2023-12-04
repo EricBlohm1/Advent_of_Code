@@ -63,7 +63,7 @@ def main():
         #id is a string
         id = extractID(line)
 
-        subsets = []
+
         # index 1 in rounds is to the right of ':'
         rounds = line.split(':')[1]
 
@@ -71,10 +71,8 @@ def main():
         for round in rounds.split(';'):
             tuple_round = extractsubset(round)
 
-
             # append true if round is valid, otherwise false
             roundOk.append(checkMaxBalls(tuple_round))
-            subsets.append(tuple_round)
 
         # if all rounds ok, add id to list of valid games    
         if all(roundOk):
